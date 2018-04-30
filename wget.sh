@@ -1,4 +1,4 @@
-echo enter new folder name
+echo enter folder name
 read a
 mkdir $a
 echo name enter webpage link:
