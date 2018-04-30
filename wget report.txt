@@ -9,7 +9,21 @@ Some of its feature are:-
 
 Invoking Wget:-
 By default, Wget is very simple to invoke. The basic syntax is:
-  wget [option]… [URL]…
-  
+    wget [option]… [URL]…
+Wget will simply download all the URLs specified on the command line. URL is a Uniform Resource Locator
 
+Option syntax:-
+Since Wget uses GNU getopt to process command-line arguments, every option has a long form along with the short one. Long options are more convenient to remember, but take time to type. You may freely mix different option styles, or specify options after the command-line arguments. Thus you may write:
+    wget -r --tries=10 http://fly.srk.fer.hr/ -o log
+The space between the option accepting an argument and the argument may be omitted.You may put several options that do not require arguments togethe, eg:-
+    wget -drc URL instead of wget -d -r -c URL
+    
+    
+Explanation of the various flags:
+* ‘-V’,‘--version’ : Display the version of Wget.
+* ‘-b’,‘--background’ : Go to background immediately after startup. If no output file is specified via the ‘-o’, output is redirected to wget-log.
+* ‘-e command’,‘--execute command’ : Execute command as if it were a part of .wgetrc (see Startup File). A command thus invoked will be executed after the commands in .wgetrc, thus taking precedence over them. If you need to specify more than one wgetrc command, use multiple instances of ‘-e’.
 
+* ‘-o logfile’,‘--output-file=logfile’ : Log all messages to logfile. The messages are normally reported to standard error.
+* ‘-a logfile’,‘--append-output=logfile’ : Append to logfile. This is the same as ‘-o’, only it appends to logfile instead of overwriting the old log file. If logfile does not exist, a new file is created.
+* 
