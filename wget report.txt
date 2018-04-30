@@ -26,4 +26,11 @@ Explanation of the various flags:
 
 * ‘-o logfile’,‘--output-file=logfile’ : Log all messages to logfile. The messages are normally reported to standard error.
 * ‘-a logfile’,‘--append-output=logfile’ : Append to logfile. This is the same as ‘-o’, only it appends to logfile instead of overwriting the old log file. If logfile does not exist, a new file is created.
-* 
+* --mirror – Makes (among other things) the download recursive.
+* --convert-links – convert all the links (also to stuff like CSS stylesheets) to relative, so it will be suitable for offline viewing.
+* --adjust-extension – Adds suitable extensions to filenames (html or css) depending on their content-type.
+* --page-requisites – Download things like CSS style-sheets and images required to properly display the page offline.
+* --no-parent – When recursing do not ascend to the parent directory. It useful for restricting the download to only a portion of the site.
+* ‘--input-metalink=file’
+Downloads files covered in local Metalink file. Metalink version 3 and 4 are supported.
+* ‘-c’,‘--continue’ : Continue getting a partially-downloaded file. This is useful when you want to finish up a download started by a previous instance of Wget, or by another program.
