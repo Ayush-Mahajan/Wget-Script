@@ -34,3 +34,4 @@ Explanation of the various flags:
 * ‘--input-metalink=file’
 Downloads files covered in local Metalink file. Metalink version 3 and 4 are supported.
 * ‘-c’,‘--continue’ : Continue getting a partially-downloaded file. This is useful when you want to finish up a download started by a previous instance of Wget, or by another program.
+* ‘--show-progress’ : Force wget to display the progress bar in any verbosity.
