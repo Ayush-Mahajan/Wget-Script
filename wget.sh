@@ -8,10 +8,10 @@ wget=/usr/bin/wget
 tar=/bin/tar
 
 #exit f cannot find basic requirements
-if[! -x "$wget"]; then
+if [ ! -x "$wget" ]
     echo "Cannot Find wget in your computer... Sorry cannt run this on your computer"
     exit 1
-elif[! -x "$tar"]; then
+elif [ ! -x "$tar" ]
     echo "Cannot Find tar in cpmuter... cannot run this program. find a computer which has tar"
     exit 1
 fi
@@ -41,7 +41,7 @@ while [ "$INPUT_STRING" != "bye" ]
         read ans
         
         # check the user input
-        if[$ans = 'y' || $ans = 'Y']
+        if [$ans = 'y' || $ans = 'Y']
             echo enter the speed limit:
             read s
             wget -r -|$c --limit-rate=$s --adjust-extension --no-clobber --no-parent $b
