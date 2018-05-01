@@ -1,9 +1,15 @@
-echo enter folder name
-read a
-mkdir $a
-echo name enter webpage link:
 
-
-function validate_url(){
-  if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then echo "true"; fi
-}
+echo **********WELCOME**********
+INPUT_STRING=hello
+while [ "$INPUT_STRING" != "bye" ]
+    do
+        echo Enter folder name :
+        read a
+        mkdir $a
+        cd $a
+        echo enter webpage link :
+        read b
+        wget --mirror --no-parent $b 
+        echo "Type "bye" to quit"
+        read INPUT_STRING
+    done
